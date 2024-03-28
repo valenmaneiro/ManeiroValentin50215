@@ -1,0 +1,16 @@
+{% extends 'aplicacion/base.html' %} 
+{% load static %} 
+{% block titulo %}Equipos{% endblock titulo %} 
+
+{% block contenido %}
+
+    <form action="" method="POST">
+        {% csrf_token %} 
+        <table>
+            {{ form.as_table }}
+        </table>
+        <div class="boton">
+        <input type="submit" value="Enviar">
+        </div>
+    </form>
+{% endblock contenido %}

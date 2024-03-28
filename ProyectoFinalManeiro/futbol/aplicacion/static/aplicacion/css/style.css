@@ -1,0 +1,519 @@
+
+body{
+    margin:0;
+    padding: 0;
+    background-color: #C4E4FF;
+    color: rgb(70, 67, 67);
+
+}
+
+
+
+/*Header*/
+header{
+    display:flex;
+    width: 100%;
+    height: 10vh;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.titulo{
+    font-size: 3rem;
+    font-weight: bold;
+    display: block;
+    margin-left: 15rem;
+    text-align: center;
+    width: 100%;
+
+}
+
+.text-center {
+    display: flex; /* Usar flexbox */
+    justify-content: flex-start; /* Alinear los elementos a la izquierda */
+    align-items: center; /* Centrar verticalmente los elementos */
+}
+
+.text-center-disabled {
+    display: flex; /* Usar flexbox */
+    justify-content: flex-start; /* Alinear los elementos a la izquierda */
+    align-items: center; /* Centrar verticalmente los elementos */
+}
+
+.text-center-disabled a{
+    font-size: 1.4rem;
+    color: rgb(70, 67, 67);
+    text-decoration: none
+;
+}
+.text-center-disabled a:hover{
+    color:white;
+}
+
+.text-center a{
+    font-size: 2rem;
+    color: rgb(70, 67, 67);
+    text-decoration: none;
+}
+
+.btn {
+    padding: 1rem;
+}
+.info-usuario {
+    display: flex; /* Utilizar flexbox */
+    flex-direction: column-reverse; /* Alinear los elementos en columna */
+    align-items: center; /* Centrar horizontalmente los elementos */
+    justify-content: center;
+    margin: 1rem;
+}
+
+.info-usuario p {
+   /* Espacio entre la imagen y el nombre de usuario */
+    text-align: center; /* Centrar el texto horizontalmente */
+    font-size: 1.3rem;
+    margin: 0;
+    padding: 0;
+}
+
+.info-usuario img {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px; /* Espaciado a la derecha */
+}
+
+
+
+/* Estilos para la barra de navegación */
+
+/* Estilo general para la barra de navegación */
+.navbar {
+    display: flex;
+    width: 100%;
+    height: 10vh;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #343a40; /* Color de fondo de la barra de navegación */
+}
+
+.container {
+    width: 100%;
+
+     display: flex; /* Utilizar flexbox para alinear los elementos */
+     justify-content: space-around; /* Espaciar los elementos de manera uniforme en la barra de navegación */
+     align-items: center; /* Centrar verticalmente los elementos */
+
+ }
+
+.navbar-nav {
+    display: flex; /* Utilizar flexbox para alinear los elementos de la lista */
+    list-style-type: none; /* Eliminar los puntos de la lista */
+    margin: 0; /* Eliminar el margen predeterminado */
+    padding: 0; /* Eliminar el relleno predeterminado */
+    text-align: center;
+}
+
+.nav-item {
+    margin: 1rem 3rem; /* Espaciado entre los elementos de la lista */
+    font-size:1.2rem;
+}
+
+.nav-link {
+    color: #ffffff; /* Color del texto de los enlaces */
+    text-decoration: none; /* Eliminar el subrayado de los enlaces */
+    padding: 5px 10px; /* Espaciado interno de los enlaces */
+}
+
+.nav-link:hover {
+    color: white; /* Color del texto de los enlaces al pasar el ratón por encima */
+}
+
+/* Estilos para el texto del usuario autenticado */
+.navbar-nav p {
+    color: brown; /* Color del texto del usuario autenticado */
+    margin-right: 10px; /* Espaciado a la derecha */
+}
+
+/* Estilos para el logo/avatar en la barra de navegación */
+.navbar-nav img {
+    margin-right: 10px; /* Espaciado a la derecha */
+    border-radius: 50%; /* Hacer el avatar redondo */
+}
+
+/* Estilos para los botones en la barra de navegación */
+.navbar-nav .btn {
+    margin-left: 10px; /* Espaciado entre los botones */
+}
+
+
+
+
+
+/*Formulario login*/
+/* Estilos para el formulario */
+form {
+    width: 50%; /* Ancho del formulario */
+    padding: 10rem 0;
+    margin: 0 auto; /* Centrar el formulario horizontalmente */
+
+
+
+}
+
+
+form table{
+    width: 100%;
+
+
+}
+
+/* Estilos para las filas de la tabla dentro del formulario */
+form table tr {
+    margin-bottom: 10px; /* Espacio entre filas */
+}
+
+/* Estilos para las celdas de la tabla dentro del formulario */
+form table td {
+    padding: 5px; /* Espaciado interno de las celdas */
+}
+
+/* Estilos para las etiquetas dentro del formulario */
+form label {
+    font-size: 2rem /* Tamaño de fuente de las etiquetas */
+}
+
+/* Estilos para los campos de entrada del formulario */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form textarea,
+form select {
+    width: 100%; /* Ancho completo */
+    padding: 8px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 4px; /* Borde redondeado */
+    box-sizing: border-box; /* Incluir el borde en el ancho total */
+    margin-top: 5px; /* Espacio superior */
+    font-size: 2rem; /* Tamaño de fuente de los campos de entrada */
+}
+
+
+.boton{display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+
+
+/* Estilos para el botón de enviar */
+form input[type="submit"] {
+    width: 50%; /* Ancho completo */
+    padding: 10px 10px; /* Espaciado interno */
+    background-color: #007bff; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Borde redondeado */
+    cursor: pointer; /* Cambiar el cursor al pasar el ratón */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+    font-size: 1.2rem; /* Tamaño de fuente del botón de enviar */
+
+    align-content: center;
+
+}
+
+/* Estilos para el botón de enviar al pasar el ratón */
+form input[type="submit"]:hover {
+    background-color: #0056b3; /* Cambiar el color de fondo al pasar el ratón */
+}
+.helptext{
+    font-size: 1rem;
+    font-weight: bold;
+    color: black 
+}
+#id_username_helptext{
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: black
+}
+
+
+/*Home*/
+
+
+.subtitulo{
+    font-size: 1.5rem;
+
+}
+
+
+/* Estilos para el contenedor principal */
+.w-100 {
+    width: 100%; /* Ancho del contenedor al 100% */
+}
+
+/* Estilos para centrar el contenido verticalmente */
+.d-flex {
+    display: flex; /* Usar flexbox */
+}
+
+.flex-column {
+    flex-direction: column; /* Alinear los elementos en columna */
+}
+
+.justify-content-center {
+    justify-content: center; /* Centrar verticalmente los elementos */
+}
+
+.align-items-center {
+    align-items: center; /* Centrar horizontalmente los elementos */
+}
+
+/* Estilos para el título */
+
+
+.py-5 {
+    padding-top: 5rem; /* Espacio superior */
+    padding-bottom: 5rem; /* Espacio inferior */
+}
+
+.fw-bold {
+    font-weight: bold; /* Texto en negrita */
+}
+
+/* Estilos para la imagen */
+.w-49 {
+    width: 49%; /* Ancho de la imagen al 49% */
+    margin: 0 auto; /* Centrar la imagen horizontalmente */
+    display: block; /* Convertir la imagen en un elemento de bloque */
+}
+
+/* Estilos para el párrafo */
+.pt-5 {
+    padding-top: 5rem; /* Espacio superior */
+}
+
+
+
+
+/*Futbolista list*/
+/* Estilos para las tablas */
+table {
+    width: 100%; /* Ancho de la tabla al 100% */
+    border-collapse: collapse; /* Colapsar los bordes de la tabla */
+}
+
+th, td {
+    padding: 8px; /* Espaciado interno de las celdas */
+    border: 1px solid #ddd; /* Borde de las celdas */
+    text-align: left; /* Alinear el texto a la izquierda */
+    font-size: 1.7rem;
+    color: rgb(184, 182, 182)
+}
+
+th {
+    background-color: #343a40; /* Color de fondo de las celdas de encabezado */
+}
+
+td a{
+    gap: 3rem;
+}
+
+/* Estilos para los botones */
+.btn-tabla {
+    text-decoration: none; /* Quitar subrayado */
+    padding: 12px 12px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Borde redondeado */
+    cursor: pointer; /* Cambiar el cursor al pasar el ratón */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+    margin-right: 5px; /* Margen derecho */
+    font-size: 1.7rem;
+}
+
+
+
+/* Estilos para las iconos */
+.fa {
+    font-size: 1.3rem; /* Tamaño de fuente */
+    vertical-align: middle; /* Alinear verticalmente */
+    margin-right: 3px; /* Margen derecho */
+}
+
+.fa-lg {
+    font-size: 1.3rem; /* Tamaño de fuente grande */
+}
+
+.fa-sm {
+    font-size: 1.3rem; /* Tamaño de fuente pequeño */
+}
+
+
+
+/*Futbolsdita individual*/
+
+/* Estilos generales para el contenido */
+
+/* Estilos para el contenedor principal */
+/* Estilos para el contenedor principal */
+/*.container {
+    display: flex; /* Utilizar flexbox */
+    /*justify-content: center; /* Centrar horizontalmente los elementos */
+    /*align-items: center; /* Centrar verticalmente los elementos */
+    /*height: 70vh; /* Altura al 100% del viewport */
+/*}
+
+/* Estilos para la tarjeta */
+.card {
+    border: 1px solid #ccc; /* Borde de la tarjeta */
+    border-radius: 8px; /* Borde redondeado */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    max-width: 600px; /* Ancho máximo */
+    width: 100%; /* Ancho al 100% */
+
+}
+
+
+
+
+/* Estilos para el texto dentro de la tarjeta */
+.card-text {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem
+; /* Tamaño de fuente */
+    margin-bottom: 10px; /* Espacio inferior */
+}
+
+.card-text h1 {
+    font-size: 2.5rem; /* Tamaño de fuente del título */
+    margin-bottom: 20px; /* Espacio inferior */
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+.card-text p {
+    margin-bottom:1rem; /* Espacio inferior */
+}
+
+
+/*AÑADIR FUTBOLISTA*/
+
+h2 {
+    font-size: 24px; /* Tamaño de fuente */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+/* Estilos para el formulario */
+form {
+    width: 40%; /* Ancho máximo del formulario */
+    margin: 0 auto; /* Centrar horizontalmente */
+    height: 30%;
+}
+
+/* Estilos para la tabla */
+table {
+    width: 100%; /* Ancho de la tabla al 100% */
+    border-collapse: collapse; /* Colapsar los bordes de la tabla */
+}
+
+/* Estilos para las celdas */
+td, th {
+    padding: 1.5rem; /* Espaciado interno de las celdas */
+    border: 1px solid #ccc; /* Borde de las celdas */
+}
+
+/*Buscar futbolista*/
+
+
+#buscar{
+    width: 50%;
+}
+
+
+
+/*Eliminar*/
+
+
+.form-eliminacion{
+    width: 27%; /* Ancho máximo del formulario */
+    margin: 0 auto; /* Centrar horizontalmente */
+    height: 30%;
+
+}
+
+
+.eliminar{
+    border: 1px solid #ccc; /* Borde de la tarjeta */
+    border-radius: 8px; /* Borde redondeado */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    max-width: 600px; /* Ancho máximo */
+    width: 100%; /* Ancho al 100% */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.eliminar-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.eliminar-text p{
+    font-size: 2rem;
+}
+
+
+/*ACERCA DE MI*/
+.acerca_de_mi{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+/*LOGOUT*/
+.logout{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+
+/*FOOTER*/
+footer{
+
+    height: 3%; /* Altura del footer */
+    text-align: center;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-top: 3rem;
+}
+
+footer p{
+    font-size: 1rem;
+    font-weight: bold;
+}
+footer a{
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    margin: 0 1rem;
+}
+footer a:hover{
+    color:white
+}
+
+

@@ -1,0 +1,19 @@
+{% extends 'aplicacion/base.html' %} 
+{% load static %} 
+{% block titulo %}Equipos{% endblock titulo %} 
+
+{% block contenido %}
+    
+    <form action="" method="POST" class="form-eliminacion">
+        {% csrf_token %}
+        <div class="eliminar">
+
+            <div class="eliminar-text">
+                <h2>¿ Esta seguro de eliminar el Equipo ? </h2>
+                <p style="color:red">{{ object.nombre }}</p>
+            </div>
+            <input type="submit" class="btn btn-primary btn-block" value="Confirmar">
+
+        </div>
+    </form>
+{% endblock contenido %}

@@ -1,0 +1,26 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+{% block titulo %}
+    Pagina de Representantes
+{% endblock titulo %}
+
+{% block contenido %}
+<div class="container">
+  <div class="card">
+    <div class="card-text">
+      <h1 class="descripcion">{{ descripcion }}</h1>
+        {% for r in representante %}
+          <div class="jugador">
+            <div class="card-text">
+              <p>Nombre: {{ r.nombre }}</p>
+              <p>Apellido: {{ r.apellido }}</p>
+              <p>Agencia de Representacion: {{ r.agencia }}</p>
+              <p class="card-text">Email de Contacto: {{ r.email }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% endblock contenido %} 

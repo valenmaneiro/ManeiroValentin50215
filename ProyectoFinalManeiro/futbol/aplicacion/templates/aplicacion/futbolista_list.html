@@ -1,0 +1,70 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+{% block titulo %}
+    Pagina de Futbolistas
+{% endblock titulo %}
+
+
+{% block contenido %}
+    <table>
+        <tr>
+            <td ><h2>Futbolistas</h2></td>
+            <td>
+              
+                <a
+                href="{% url 'añadir_futbolista' %}"
+                class="btn-tabla btn-primary btn-sm"
+                ><i class="fa fa-plus fa-lg" title="New Record"> </i>
+                </a>
+                <a
+                        href="{% url 'buscar_futbolista' %}"
+                        class="btn-tabla btn-primary btn-sm"
+                ><i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+            
+            </td>
+
+        </tr>
+    </table>
+    
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nombre Completo</th>
+                <th>Nacionalidad</th>
+                <th>Equipo</th>
+                <th>Dorsal</th>
+                
+                
+            </tr>
+        </thead>
+        <tbody>
+        {% for futbolista in futbolista_list%}
+        <tr>
+            <td>{{ futbolista.nombreCompleto }}</td>
+            <td>{{ futbolista.nacionalidad }}</td>
+            <td>{{ futbolista.equipo }}</td>
+            <td>{{ futbolista.dorsal }}</td>
+            
+            <td>
+                
+                <a
+                  href="{% url 'editar_futbolista' futbolista.id %}"
+                  class="btn-tabla btn-primary"
+                  style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+                  ><i class="fa fa-edit fa-sm" title="Edit Record"></i>
+                </a>
+                <a
+                  href="{% url 'borrar_futbolista' futbolista.id %}"
+                  class="btn-tabla btn-danger"
+                  style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+                  ><i class="fa fa-trash fa-sm" title="Delete Record"></i>
+                </a>
+                
+              </td>        
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock contenido %}

@@ -1,0 +1,26 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+{% block titulo %}
+    Pagina de Futbolistas
+{% endblock titulo %}
+
+{% block contenido %}
+<div class="container">
+    <div class="card">
+      <div class="card-text">
+        <h1 class="descripcion">{{ descripcion }}</h1>
+        {% for f in futbolista %}
+          <div class="jugador">
+            <div class="card-text">
+              <p class="">Nombre: {{ f.nombreCompleto }}</p>
+              <p class="">Nacionalidad: {{ f.nacionalidad }}</p>
+              <p class="">Equipo: {{ f.equipo }}</p>
+              <p class="">Dorsal: {{ f.dorsal }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% endblock contenido %} 

@@ -1,0 +1,69 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+{% block titulo %}
+    Pagina de Entrenadores
+{% endblock titulo %}
+
+
+{% block contenido %}
+    <table>
+        <tr>
+            <td ><h2>Entrenadores</h2></td>
+            <td>
+              
+                <a
+                href="{% url 'añadir_entrenador' %}"
+                class="btn btn-primary btn-sm"
+                ><i class="fa fa-plus fa-lg" title="New Record"> </i>
+                </a>
+
+                <a
+                        href="{% url 'buscar_entrenador' %}"
+                        class="btn btn-primary btn-sm"
+                ><i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+                
+            </td>
+
+        </tr>
+    </table>
+    
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nombre Completo</th>
+                <th>Nacionalidad</th>
+                <th>Equipo</th>
+                
+                
+            </tr>
+        </thead>
+        <tbody>
+        {% for entrenador in entrenador_list%}
+        <tr>
+            <td>{{ entrenador.nombreCompleto }}</td>
+            <td>{{ entrenador.nacionalidad }}</td>
+            <td>{{ entrenador.equipo }}</td>
+            
+            <td>
+                
+                <a
+                  href="{% url 'editar_entrenador' entrenador.id %}"
+                  class="btn btn-primary"
+                  style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+                  ><i class="fa fa-edit fa-sm" title="Edit Record"></i>
+                </a>
+                <a
+                  href="{% url 'borrar_entrenador' entrenador.id %}"
+                  class="btn btn-danger"
+                  style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+                  ><i class="fa fa-trash fa-sm" title="Delete Record"></i>
+                </a>
+                
+              </td>        
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock contenido %}

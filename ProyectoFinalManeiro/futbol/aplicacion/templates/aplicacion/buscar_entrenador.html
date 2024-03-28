@@ -1,0 +1,19 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+{% block titulo %}
+    Buscar Entrenador
+{% endblock titulo %}
+
+
+{% block contenido %}
+
+    <form action="/buscar_de_entrenador" method="get">
+        {% csrf_token %}
+        <h1>Nombre de Entrenador: <input type="text" name="buscar" id="buscar"></h1>
+
+        <div class="boton">
+            <input type="submit" value="Enviar">
+        </div>
+    </form>
+{% endblock contenido %}

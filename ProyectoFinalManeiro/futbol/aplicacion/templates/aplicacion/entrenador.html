@@ -1,0 +1,27 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+{% block titulo %}
+    Pagina de Entrenadores
+{% endblock titulo %}
+
+
+{% block contenido %}
+<div class="container">
+    <div class="card">
+      <div class="card-text">
+          <h1 class="descripcion">{{ descripcion }}</h1>
+        {% for e in entrenador %}
+          <div class="entreandor">
+            <div class="card-text">
+              <p class="card-title">Nombre:{{ e.nombreCompleto }}</p>
+              <p class="card-subtitle mb-2 text-muted">Nacionalidad: {{ e.nacionalidad }}</p>
+              <p class="card-text">Equipo: {{ e.equipo }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% endblock contenido %} 
+    
