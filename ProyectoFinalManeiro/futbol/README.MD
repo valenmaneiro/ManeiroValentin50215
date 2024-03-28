@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 PROYECTO FINAL
 
 Comision: 50215
