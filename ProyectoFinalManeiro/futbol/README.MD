@@ -18,10 +18,10 @@ Blog web donde se puede encontrar la disponibilidad de todo tipo de individuos/o
 Con el fin de que el usuario pueda publicar jugadores/entrenadores a la venta (o buscarlos para adquirir sus servicios si tu eres un representante o un enviado de un equipo de futbol) o si ya eres un futbolista o un entrenador buscar la disponibilidad de equipos o representantes para elevar tu carrera. El mismo debera loguearse dentro de nuestro blog o por el contrario sera redirigido a la pagina de inicio para que pueda dirigirse el portal de registracion.
 
 Acciones que podran realizar los usuarios:
-      --> Publicar, editar info, borrar o buscar jugadores
-      --> Publicar, editar info, borrar o buscar entrenadores
-      --> Publicar, editar info, borrar o buscar equipos
-      --> Publicar, editar info, borrar o buscar representantes
+      --> Publicar, editar info, borrar o buscar jugadores (buscar por nombre completo)
+      --> Publicar, editar info, borrar o buscar entrenadores (buscar por nombre completo)
+      --> Publicar, editar info, borrar o buscar equipos (buscar por nombre de equipo)
+      --> Publicar, editar info, borrar o buscar representantes (buscar por apellido)
       --> Editar Usuario
       --> Cambiar Contraseña
       --> Poner/Cambiar un icono avatar
